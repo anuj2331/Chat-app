@@ -16,15 +16,23 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post(
-        `${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/v1/user/login`,
+      // const res = await axios.post(
+      //   `${process.env.REACT_APP_BASE_URL || 'http://localhost:8080'}/api/v1/user/login`,
+      //   user,
+      //   {
+      //     headers: { 'Content-Type': 'application/json' },
+      //     withCredentials: true,
+      //   }
+      // );
+
+          const res = await axios.post(
+        `${process.env.REACT_APP_BASE_URL || 'https://chat-app-kmo2.onrender.com'}/api/v1/user/login`,
         user,
         {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true,
         }
       );
-
       dispatch(setAuthUser(res.data));
       toast.success("Login successful!");
       navigate("/");

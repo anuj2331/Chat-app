@@ -20,10 +20,13 @@ const Sidebar = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/api/v1/user/logout`, {
-        withCredentials: true,
-      });
+      // const res = await axios.get(`http://localhost:8080/api/v1/user/logout`, {
+      //   withCredentials: true,
+      // });
 
+         const res = await axios.get(`https://chat-app-kmo2.onrender.com/api/v1/user/logout`, {
+        withCredentials: true,
+          });
       toast.success(res.data.message || "Logged out successfully");
       dispatch(setAuthUser(null));
       dispatch(setMessages([]));
