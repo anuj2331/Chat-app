@@ -59,7 +59,7 @@ const Signup = () => {
       // );
          const res = await axios.post(
         `${
-          process.env.REACT_APP_BASE_URL || "https://chat-app-kmo2.onrender.com"
+          "https://chat-app-kmo2.onrender.com"
         }/api/v1/user/register`,
         user,
         {
