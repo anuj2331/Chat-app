@@ -33,7 +33,12 @@ function App() {
 
   useEffect(()=>{
     if(authUser){
-        const socket=io('http://localhost:8080',{
+      //   const socket=io('http://localhost:8080',{
+      //     query:{
+      //       userId:authUser._id
+      //     }
+      // });
+         const socket=io('https://chat-mh8rxv84q-anuj2331s-projects.vercel.app/',{
           query:{
             userId:authUser._id
           }
