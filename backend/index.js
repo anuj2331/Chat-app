@@ -19,8 +19,9 @@ app.use(cookieParser());
 //     credentials:true
 // };
 
+
 const corsOption = {
-  origin: "https://chat-h0cnd8klt-anuj2331s-projects.vercel.app",
+  origin: "chat-82umajhbm-anuj2331s-projects.vercel.app",
   credentials: true
 };
 app.use(cors(corsOption)); 
